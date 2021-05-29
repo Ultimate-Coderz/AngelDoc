@@ -1,0 +1,122 @@
+<html>
+<head>
+  <title> Precription </title>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
+
+  
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+    crossorigin="anonymous">
+  
+  
+  <style>
+    @media print {
+      .noprint {
+        visibility: hidden;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+	
+
+    <div class="container">
+      <div class="row justify-content-md-center">
+          <div class="col-md-10 py-3 section-title">
+              <h2 class="text-center "> Medical Prescription </h2>
+              <form class="formSelect rounded border border-dark p-5 " style="background-color: #f4f5f7;" >
+                <lable>Name of the Patient :</lable>
+                <input  type="text" name="name" size="15" class="form-control"/>
+               
+                
+        
+                <div class="row g-2">
+                  <div class="col-md">
+                    <lable>Patient Age :</lable>
+                    <input type="text" name="age" size="15" class="form-control"/>
+                  </div>
+                  <div class="col-md">
+                    <lable>Blood_Group :</lable>
+                    <select class="form-control">
+                        <option value="Blood_Group">Blood Group</option>
+                        <option values="A">A+</option>
+                        <option values="A">A-</option>
+                        <option values="B">B+</option>
+                        <option values="B">B-</option>
+                        <option values="AB">AB+</option>
+                        <option values="AB">AB-</option>
+                        <option values="O">O+</option>
+                        <option values="O">O-</option>
+                        
+                    </select>
+                  </div>
+              </div>
+        
+                <lable>Contact Details :</lable>
+                <input type="text" name="contactDetails" size="15" class="form-control"/>
+
+                <lable>Diagnosed with :</lable>
+                <input type="text" name="diagnosied" size="25" class="form-control"/> <br> <br>
+                  
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th class="text-center" scope="col">Drug</th>
+                            <th class="text-center" scope="col">Unit(tablet or syrup)</th>
+                            <th class="text-center" scope="col">Dosage(per day)</th>
+                          </tr>
+                        </thead>
+                        <tbody id="medDetails">
+                          <tr>
+                            <td><input type="text" class="form-control"/></td>
+                            <td><input type="text" class="form-control"/></td>
+                            <td><input type="text" class="form-control"/></td>
+                          </tr>
+                          <tr>
+                            <td><input type="text" class="form-control"/></td>
+                            <td><input type="text" class="form-control"/></td>
+                            <td><input type="text" class="form-control"/></td>       
+                         </tr>
+                         <tr>
+                            <td><input type="text" class="form-control"/></td>
+                            <td><input type="text" class="form-control"/></td>
+                            <td><input type="text" class="form-control"/></td>
+                         </tr>
+                        </tbody>
+                      </table> 
+                      <input type="button" value="Add Row" class="form-control btn btn-primary noprint" onclick="addRow()"> <br> <br>
+                
+                      <lable>Examination to be done :</lable>
+                      <input class="form-control" type="text" name="Examination to be done"  size="30" />
+                        
+                      <lable>Things to follow :</lable>
+                      <textarea class="form-control"></textarea>
+
+                      <lable>Name of the Doctor :</lable>
+                      <input class="form-control" type="text" name="Examination to be done"  size="35"/>
+            </form>
+
+            <input type="button" value="Print" class="btn btn-primary noprint" onclick="window.print()">
+          </div>
+        </div>
+    </div>
+
+    <script>
+      function addRow(){
+        var s = document.getElementById("medDetails").innerHTML;
+        s+="<tr> <td><input type=\"text\" class=\"form-control\"/></td> <td><input type=\"text\" class=\"form-control\"/></td> <td><input type=\"text\" class=\"form-control\"/></td> </tr>"
+        document.getElementById("medDetails").innerHTML=s;
+      }
+    </script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>    
+</body>
+</html>

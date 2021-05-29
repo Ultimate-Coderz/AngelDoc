@@ -1,0 +1,193 @@
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #aab2bd;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 0 15px;
+  background: #ffffff;
+  overflow-y: auto;
+  box-shadow:  1px 1px 10px #d9d9d9;
+}
+
+#header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #3291e6;
+}
+
+#header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .profile h1 a, #header .profile h1 a:hover {
+  color: #000 !important;
+  text-decoration: none;
+}
+
+#main {
+  margin-left: 250px;
+  padding: 0 50px;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu {
+  padding: 30px 0 0 0;
+}
+
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu a {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.nav-menu a i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+}
+
+.nav-menu a:hover, .nav-menu .active, .nav-menu li:hover > a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-menu a:hover i, .nav-menu .active i, .nav-menu li:hover > a i {
+  color: #149ddd;
+}
+
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+
+.section-dash{
+  margin-top: 2rem;
+  border-radius: 10px;
+  
+}
+
+.section-dash:hover{
+  transform: scale(1.01);
+  box-shadow:  6px 6px 12px #999999,-6px -6px 12px #ffffff;
+}
+
+/* Appointment */
+.appointment , .patient{
+  background: #56CCF2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /* background-image: linear-gradient(to right top, #8e2de2, #7e53ec, #726cf1, #6e81f2, #7393ef, #68a3f5, #64b1f8, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+}
+
+.doctor{
+  /* background: #ffc56e; */
+  /* background-image: linear-gradient(to left bottom, #fdc830, #feb32b, #fd9d2c, #f98830, #f37335); */
+  background-image: linear-gradient(to right top, #f9aa33, #fbb143, #fcb852, #febe60, #ffc56e);
+}
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+.counts {
+  padding: 50px 0 0px;
+}
+
+.counts .count-box {
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #fff;
+}
+
+.counts .count-box i {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  background: #1977cc;
+  color: #fff;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.counts .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #082744;
+}
+
+.counts .count-box p {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
