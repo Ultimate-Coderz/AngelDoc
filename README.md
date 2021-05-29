@@ -43,6 +43,7 @@
 
   ▶	After running the application on server, click on Login/SignUp to go to Login and Signup page.<br><br>
   ▶	Here you first login as admin by using the following credentials :-<br>
+     	` Email – angeldocco@gmail.com `
        ` Email – angeldocco@gmail.com `
       ` Password – Admin@123 `
      
