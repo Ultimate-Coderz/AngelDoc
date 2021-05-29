@@ -16,7 +16,7 @@
 ## How to run
 
 ### Prerequisites: 
- `Please ensure that the following requirements are installed to run the Web-application:💻`
+ `Please ensure that the following requirements are installed to run the Web-application💻:`
  
   ✔	Java Runtime Environment (JRE)
   ✔	Oracle 11g Express Edition
@@ -24,7 +24,7 @@
   ✔	Eclipse 2018-09 ver. Or higher
 
 ### Installing & running the Application in Eclipse:
- 	`Please follow the step to install & run the application in Eclipse IDE:`
+  `Please follow the step to install & run the application in Eclipse IDE:`
 
   1️⃣. Unzip AngelDoc.zip file in a desired folder.
   2️⃣.	Open the previous folder in Eclipse as a workspace.
