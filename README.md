@@ -1,5 +1,5 @@
 # AngelDoc
-
+## About Us
 ### This is a `Doctor Consultation Web Application`
 
 ### Created by our team member 
@@ -44,12 +44,8 @@
   ▶	After running the application on server, click on Login/SignUp to go to Login and Signup page.<br><br>
   ▶	Here you first login as admin by using the following credentials :-<br>
   
-     	``` 
-        Email – angeldocco@gmail.com
-     ```
-      ```
+      Email – angeldocco@gmail.com
       Password – Admin@123
-      ```
      
   ▶ You can use the Admin login in order to add a new Coordinator into the system. 
   ▶ You can also signup as new user for becoming a doctor or a patient. 
