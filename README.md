@@ -18,10 +18,10 @@
 ### Prerequisites: 
  `Please ensure that the following requirements are installed to run the Web-application💻:`
  
-  ✔	Java Runtime Environment (JRE)
-  ✔	Oracle 11g Express Edition
-  ✔	Apache Tomcat Server ver. 7.0 or higher
-  ✔	Eclipse 2018-09 ver. Or higher
+  ✔	Java Runtime Environment (JRE) <br>
+  ✔	Oracle 11g Express Edition<br>
+  ✔	Apache Tomcat Server ver. 7.0 or higher<br>
+  ✔	Eclipse 2018-09 ver. Or higher<br>
 
 ### Installing & running the Application in Eclipse:
   `Please follow the step to install & run the application in Eclipse IDE:`
@@ -43,11 +43,13 @@
 
   ▶	After running the application on server, click on Login/SignUp to go to Login and Signup page.<br><br>
   ▶	Here you first login as admin by using the following credentials :-<br>
-  ```
-git clone git@github.com:panzerdp/clipboardy.git clipboardy-chrome-extension
-```
-     	``` Email – angeldocco@gmail.com ```
-      ``` Password – Admin@123 ```
+  
+     	``` 
+        Email – angeldocco@gmail.com
+     ```
+      ```
+      Password – Admin@123
+      ```
      
   ▶ You can use the Admin login in order to add a new Coordinator into the system. 
   ▶ You can also signup as new user for becoming a doctor or a patient. 
