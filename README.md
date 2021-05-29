@@ -47,5 +47,5 @@
       Email – angeldocco@gmail.com
       Password – Admin@123
      
-  ▶ You can use the Admin login in order to add a new Coordinator into the system. 
+  ▶ You can use the Admin login in order to add a new Coordinator into the system. <br>
   ▶ You can also signup as new user for becoming a doctor or a patient. 
