@@ -43,6 +43,9 @@
 
   ▶	After running the application on server, click on Login/SignUp to go to Login and Signup page.<br><br>
   ▶	Here you first login as admin by using the following credentials :-<br>
+  ```
+git clone git@github.com:panzerdp/clipboardy.git clipboardy-chrome-extension
+```
      	``` Email – angeldocco@gmail.com ```
       ``` Password – Admin@123 ```
      
