@@ -11,7 +11,7 @@
 		<welcome-file>/index.jsp</welcome-file>
 	</welcome-file-list>
 
-	<!-- <error-page>
+	<error-page>
 		<error-code>404</error-code>
 		<location>/errorPage/Error404.jsp</location>
 	</error-page>
@@ -24,6 +24,6 @@
 	<error-page>
 		<error-code>405</error-code>
 		<location>/errorPage/Error405.jsp</location>
-	</error-page>  -->
+	</error-page>
 
 </web-app>
