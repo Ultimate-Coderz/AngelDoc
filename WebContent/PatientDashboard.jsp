@@ -190,7 +190,7 @@
 								<td class="text-center text-light"><%=a.getCharges()%></td>
 								<td class="text-center text-light"><a onclick="
                                           Notiflix.Confirm.Show(
-                                                    'Confirm Delete',
+                                                    'Confirm Cancel',
                                                     'Do you want to cancel this appointment?',
                                                     'Yes', 'No',
                                                     function(){
@@ -267,7 +267,7 @@
 								<td class="text-center text-light"><%=a.getCharges()%></td>
 								<td class="text-center text-light"><a onclick="
                                           Notiflix.Confirm.Show(
-                                                    'Confirm Delete',
+                                                    'Confirm Cancel',
                                                     'Do you want to cancel this appointment?',
                                                     'Yes', 'No',
                                                     function(){
