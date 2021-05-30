@@ -199,7 +199,7 @@
 									<td class="text-center text-light"><a
 										onclick="
                                           Notiflix.Confirm.Show(
-                                                    'Confirm Delete',
+                                                    'Confirm Reject',
                                                     'Do you want to reject this appointment?',
                                                     'Yes', 'No',
                                                     function(){
@@ -280,7 +280,7 @@
 									<td class="text-center text-light"><a
 										onclick="
                                           Notiflix.Confirm.Show(
-                                                    'Confirm Delete',
+                                                    'Confirm Approve',
                                                     'Do you want to approve this appointment?',
                                                     'Yes', 'No',
                                                     function(){
@@ -293,7 +293,7 @@
 									<td class="text-center text-light"><a
 										onclick="
                                           Notiflix.Confirm.Show(
-                                                    'Confirm Delete',
+                                                    'Confirm Reject',
                                                     'Do you want to reject this appointment?',
                                                     'Yes', 'No',
                                                     function(){
