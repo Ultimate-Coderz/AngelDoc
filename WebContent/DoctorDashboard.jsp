@@ -199,8 +199,8 @@
 									<td class="text-center text-light"><a
 										onclick="
                                           Notiflix.Confirm.Show(
-                                                    'Confirm Reject',
-                                                    'Do you want to reject this appointment?',
+                                                    'Confirm Cancel',
+                                                    'Do you want to cancel this appointment?',
                                                     'Yes', 'No',
                                                     function(){
                                                       window.location.href = 'RejectAppointmentServ?appId=<%=a.getAppId()%>'; },
