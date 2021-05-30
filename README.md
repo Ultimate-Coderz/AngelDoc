@@ -8,7 +8,7 @@
   <li>Vignesh Gupta</li>
   <li>Liza Mathur</li>
   <li>Priyanshu Nagar</li>
-  <li>Anirud Richhariya</li>
+  <li>Anirudh Richhariya</li>
   <li>Tejas Bhandigare</li>
 </ul>
 
