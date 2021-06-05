@@ -5,23 +5,20 @@ import org.hibernate.cfg.Configuration;
 
 
 @SuppressWarnings("deprecation")
-public class HibernateUtil 
-{
-	
-	static SessionFactory factory = null;
+public class HibernateUtil {
 
-	static
-	{
-		factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Doctor.class)
-				.addAnnotatedClass(Patient.class).addAnnotatedClass(Coordinator.class)
-				.addAnnotatedClass(Appointment.class).addAnnotatedClass(Users.class).buildSessionFactory();
-	}
+    static SessionFactory factory = null;
 
-	public static SessionFactory getSessionFactory() 
-	{
+    static {
+        factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Doctor.class)
+                .addAnnotatedClass(Patient.class).addAnnotatedClass(Coordinator.class)
+                .addAnnotatedClass(Appointment.class).addAnnotatedClass(Users.class).buildSessionFactory();
+    }
 
-		return factory;
+    public static SessionFactory getSessionFactory() {
 
-	}
+        return factory;
+
+    }
 
 }

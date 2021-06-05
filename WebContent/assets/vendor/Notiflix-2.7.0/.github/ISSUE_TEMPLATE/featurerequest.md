@@ -1,9 +1,6 @@
 ---
-name: FeatureRequest
-about: Suggest an idea to help us improve.
-title: "[FEAT] - "
-labels: enhancement
-assignees: furcan
+name: FeatureRequest about: Suggest an idea to help us improve. title: "[FEAT] - "
+labels: enhancement assignees: furcan
 
 ---
 

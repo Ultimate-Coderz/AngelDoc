@@ -4,33 +4,33 @@
 
 <hibernate-configuration>
 
-	<session-factory>
+    <session-factory>
 
-		<!-- JDBC Database connection settings -->
-		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
-		<property name="connection.username">system</property>
-		<property name="connection.password">vedasole</property>
+        <!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+        <property name="connection.username">system</property>
+        <property name="connection.password">vedasole</property>
 
-		<!-- JDBC connection pool settings ... using built-in test pool -->
-		<property name="connection.pool_size">1</property>
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="connection.pool_size">1</property>
 
-		<!-- Select our SQL dialect -->
-		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+        <!-- Select our SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.OracleDialect</property>
 
-		<!-- Echo the SQL to stdout -->
-		<property name="show_sql">false</property>
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">false</property>
 
-		<!-- Set the current session context -->
-		<property name="current_session_context_class">thread</property>
-		<property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- Set the current session context -->
+        <property name="current_session_context_class">thread</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
 
-		<mapping class="Hibernate.Doctor" />
-		<mapping class="Hibernate.Users" />
-		<mapping class="Hibernate.Patient" />
-		<mapping class="Hibernate.Coordinator" />
-		<mapping class="Hibernate.Appointment" />
+        <mapping class="Hibernate.Doctor"/>
+        <mapping class="Hibernate.Users"/>
+        <mapping class="Hibernate.Patient"/>
+        <mapping class="Hibernate.Coordinator"/>
+        <mapping class="Hibernate.Appointment"/>
 
-	</session-factory>
+    </session-factory>
 
 </hibernate-configuration>
