@@ -2,6 +2,18 @@
 ## About Us
 ### This is a `Doctor Consultation Web Application`
 
+
+### Created by our team member 
+<ul>
+  <li>Ved Asole</li>
+  <li>Vignesh Gupta</li>
+  <li>Liza Mathur</li>
+  <li>Priyanshu Nagar</li>
+  <li>Anirudh Richhariya</li>
+  <li>Tejas Bhandigare</li>
+</ul>
+
+
 ## How to run
 
 ### Prerequisites: 
