@@ -12,8 +12,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>AngelDoc</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="A web-based doctor consultancy system which allow patients to create their account on the website and then consult with the doctors who have already registered on the website." name="description">
+  <meta content="AngelDoc,AngelDoc Consultancy,angel doc,angel doc consultancy,angeldoc,Angeldoc,doctor consultancy,online doctor consultancy,online doctor help,online doctor" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">

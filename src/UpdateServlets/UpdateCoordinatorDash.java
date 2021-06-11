@@ -10,7 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
+
 import Hibernate.Coordinator;
+import dao.LoggerBO;
 import dao.UpdateDAO;
 
 @WebServlet("/UpdateCoordinatorDash")
@@ -47,6 +50,9 @@ public class UpdateCoordinatorDash extends HttpServlet
 		session.removeAttribute("userObj");
 		session.setAttribute("userObj", c);
 		RequestDispatcher rd=request.getRequestDispatcher("UpdateToDashboard");
+		LoggerBO lbo=new LoggerBO();
+        Logger logger=lbo.getLogger("UpdateCoordinatorDash");
+        logger.info(c.getFirstName()+" "+c.getLastName()+" updated his profile");       
 		rd.forward(request, response);
 	}
 }

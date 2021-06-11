@@ -39,7 +39,6 @@ public class DeleteUserServ extends HttpServlet
 		if(u!=null)
 		{
 			role=udao.getRole(id);
-			System.out.println("role 1="+role);
 			DeleteDAO ddao=new DeleteDAO();
 			
 			if(role==1)
@@ -58,7 +57,7 @@ public class DeleteUserServ extends HttpServlet
 			{
 				ddao.deletePatient(id);
 			}
-			System.out.println("role 2="+role);
+			
 			HttpSession session=request.getSession();
 			if(session.getAttribute("userObj") instanceof Doctor)
 			{
@@ -81,8 +80,7 @@ public class DeleteUserServ extends HttpServlet
 				}
 				
 			}			
-			System.out.println("Going to DeleteToDashboard");
-			System.out.println("role 3="+role);
+			
 			request.setAttribute("role", role);			
 			request.setAttribute("id", id);
 			RequestDispatcher rd=request.getRequestDispatcher("DeleteToDashboard");
@@ -111,16 +109,12 @@ public class DeleteUserServ extends HttpServlet
 				Coordinator c=(Coordinator) session.getAttribute("userObj");
 				if(c.getId()==1)
 				{
-					System.out.println("role 6 ="+role);
 					request.setAttribute("role", 1);
 				}
 				else if(c.getId()>1 && c.getId()<=3000000)
 				{
-					System.out.println("role 7="+role);
 					request.setAttribute("role", 2);
 				}
-				System.out.println("Going to DashboardServ");
-				System.out.println("role= 8"+role);
 				RequestDispatcher rd=request.getRequestDispatcher("DashboardServ");
 				rd.forward(request, response);
 			}

@@ -1,7 +1,5 @@
 package AddServlets;
 
- 
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -11,12 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+import org.apache.log4j.Logger;
 import Hibernate.Coordinator;
 import Hibernate.Doctor;
-import Hibernate.Users;
 import MigrateServlets.Alert;
 import dao.DoctorDAO;
+import dao.LoggerBO;
 import dao.UsersDAO;
 
 @WebServlet("/AddDoctorServ")
@@ -150,6 +148,9 @@ public class AddDoctorServ extends HttpServlet
 	                rd.include(request, response);
 	                Alert a=new Alert();
 	                out.println(a.successAlert("Doctor Added Successfully"));
+	                LoggerBO lbo=new LoggerBO();
+                    Logger logger=lbo.getLogger("AddDoctorServ");
+                    logger.info("Doctor added by Admin");                
 	            }
 	            else
 	            {
@@ -157,6 +158,10 @@ public class AddDoctorServ extends HttpServlet
 	                rd.include(request, response);
 	                Alert a=new Alert();
 	                out.println(a.successAlert("Doctor Added Successfully"));
+	                LoggerBO lbo=new LoggerBO();
+                    Logger logger=lbo.getLogger("AddDoctorServ");
+                    Coordinator c=(Coordinator) session.getAttribute("userObj");
+                    logger.info("Doctor added by "+c.getFirstName()+" "+c.getLastName());
 	            }
             
             }

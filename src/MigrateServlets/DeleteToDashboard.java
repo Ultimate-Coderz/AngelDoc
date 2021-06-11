@@ -34,7 +34,6 @@ public class DeleteToDashboard extends HttpServlet
 		String msg="";
 		PrintWriter out=response.getWriter();
 		
-		System.out.println("Going to dashName " + dashName);
 		RequestDispatcher rd=request.getRequestDispatcher(dashName);
 		rd.include(request, response);
 		Alert alert=new Alert();
@@ -53,7 +52,6 @@ public class DeleteToDashboard extends HttpServlet
 		}		
 		
 		out.println(alert.successAlert(msg));
-		System.out.println(alert.successAlert(msg));
 		
 	}
 	

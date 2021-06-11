@@ -1,7 +1,5 @@
 package LoginServlets;
 
- 
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -15,12 +13,7 @@ import Hibernate.*;
 import MigrateServlets.Alert;
 import dao.*;
 
- 
-
 @WebServlet("/SignInServ")
-
- 
-
 public class SignInServ extends HttpServlet 
 {
     
@@ -35,7 +28,6 @@ public class SignInServ extends HttpServlet
     	
 	        if(request.getSession(false)==null || request.getParameter("email")==null || request.getParameter("pass")==null )
 	        {
-	            System.out.println("Session is null!!!");
 	            response.sendRedirect("Login.jsp");
 	        }
 	        else if(request.getSession().getAttribute("userObj")!=null)
@@ -110,7 +102,6 @@ public class SignInServ extends HttpServlet
 	            {
 	                RequestDispatcher rd=request.getRequestDispatcher("Login.jsp");
 	                rd.include(request, response);
-	                System.out.println("Inside else 1 ");
 	                Alert a=new Alert();
 	                out.println(a.failureReport("Invalid username or password", ""));	                
 	            }
@@ -119,7 +110,6 @@ public class SignInServ extends HttpServlet
 	        {
 	            RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
 	            rd.include(request, response);
-	            System.out.println("Inside else 2 ");
 	            Alert a=new Alert();
                 out.println(a.failureReport("Enter correct and full details", ""));               
 	        }
@@ -131,7 +121,6 @@ public class SignInServ extends HttpServlet
     {
     	if(request.getSession(false)==null || request.getParameter("email")==null )
         {
-            System.out.println("Session is null!!!");
             response.sendRedirect("Login.jsp");
         }
         else if(request.getSession().getAttribute("userObj")!=null)

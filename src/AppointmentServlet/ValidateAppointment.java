@@ -34,24 +34,17 @@ public class ValidateAppointment extends HttpServlet
         long start=appStartTime.getTime();
         long end = appStartTime.getTime()+30*60*1000;
         Time appEndTime = new Time(end);
-        String appointmentEndingTime=appEndTime.toString().substring(0, 5);
         
-        //sysout start
-        System.out.println("String end time = " +appointmentEndingTime);
-        System.out.println("end time = " + appEndTime);
-        
-        //sysout end
         int i=1;
         boolean flag = true;
         
-        System.out.println("appStartTime.compareTo(appEndTime)"+(end-start));
         if((end-start)>=900000)
         {
         
         DoctorDashboardDAO docDashDAO=new DoctorDashboardDAO();
         List<Appointment> docUpcomingList = docDashDAO.getUpcomingAppointments(doc.getDocId());
         List<Appointment> docUpcomingDateList = new ArrayList<Appointment>();
-        System.out.println("Upcoming size = "+docUpcomingList.size());
+        
         if(docUpcomingList.size()>0){
         
         for(Appointment a: docUpcomingList)
@@ -59,17 +52,13 @@ public class ValidateAppointment extends HttpServlet
             if(a.getSqlDate().equals(date))
             docUpcomingDateList.add(a);            
         }
-        System.out.println("Date upcoming size = "+docUpcomingDateList.size());
          
         for(Appointment a : docUpcomingDateList)
         {
-            System.out.println("No of times ");
-            
             Time x1 = Time.valueOf(a.getStartingTime()+":00");
             Time x2 = Time.valueOf(a.getEndingTime()+":00");
             if(appStartTime.compareTo(x1)==0 || appEndTime.compareTo(x2)==0)
             {
-                System.out.println("In == wala validation");
                 flag=false;
                 break;
             }
@@ -77,21 +66,19 @@ public class ValidateAppointment extends HttpServlet
             {
                 if(appStartTime.compareTo(x1)<0)
                 {
-                    System.out.println("when given time is before start time");
-                    if(appEndTime.compareTo(x1)<=0)  System.out.println("when end time is before start time of already");
-                    else{
-                        System.out.println("When false: - "+ a.getAppId());
+                    
+                    if(appEndTime.compareTo(x1)>0)  
+                    {                        
                         flag = false;
                         break;
-                        }
+                    }
                 }
                 else
                 {
                     
                     if(appStartTime.compareTo(x2)>=0)
                     {
-                        System.out.println("when given time is after end time");
-                        flag=true;
+                       flag=true;
                     }
                     else
                     {
@@ -102,14 +89,13 @@ public class ValidateAppointment extends HttpServlet
             }
         }
         }
-        else{
-            System.out.println("in upcoming minus hello");
+        else
+        {
             flag=true;
         }
         
         if(flag)
         {
-            //forward to payment.jsp
             RequestDispatcher rd = request.getRequestDispatcher("payment.jsp");
             request.setAttribute("startingTime", appointmentStartingTime);
             request.setAttribute("date", dateString);

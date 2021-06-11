@@ -19,6 +19,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import Hibernate.Coordinator;
 import Hibernate.Doctor;
 import Hibernate.Patient;
+import MigrateServlets.Alert;
 import dao.CommonDAO;
 import dao.UpdateDAO;
 
@@ -45,15 +46,13 @@ private static final long serialVersionUID = 1L;
         		dashName="DoctorDashboard.jsp";
         		Doctor d=(Doctor) s.getAttribute("userObj");
         		id=d.getDocId();
-        		System.out.println("DocId = " +id);
-        	}
+        		}
         	else if(s.getAttribute("userObj") instanceof Patient)
         	{
         		dashName="PatientDashboard.jsp";
         		Patient p= (Patient) s.getAttribute("userObj");
         		id=p.getpId();
-        		System.out.println("PatId = " +id);
-        	}
+        		}
         	else if(s.getAttribute("userObj") instanceof Coordinator)
         	{
         		Coordinator c=(Coordinator) s.getAttribute("userObj");
@@ -62,14 +61,12 @@ private static final long serialVersionUID = 1L;
         		{
         			dashName="AdminDashboard.jsp";
         			id=1;
-            		System.out.println("AddId = " +id);
-        		}
+            	}
         		else
         		{
         			dashName="CoordinatorDashboard.jsp";
         			id=c.getId();
-            		System.out.println("CorId = " +id);
-        		}
+            	}
         	}
         }
         
@@ -83,16 +80,13 @@ private static final long serialVersionUID = 1L;
                 List<FileItem> multiparts = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
                 for(FileItem item:multiparts)
                 {
-                    System.out.println("loop");
                     if(!item.isFormField())
                     {
                     	int temp=item.getName().indexOf(".");
                     	String fileExt=item.getName().substring(temp);
                     	String newFileName=id+fileExt;
-                    	System.out.println(newFileName);
-                        String name="C:/Users/ved.asole/Desktop/Project Workspace/AngleDoc/WebContent/Image"+ File.separator + newFileName;
+                    	String name="C:/Users/ved.asole/Desktop/Project Workspace/AngleDoc/WebContent/Image"+ File.separator + newFileName;
                         item.write(new File(name));
-                        System.out.println("-----------------------"+name+"-----------------------");
                         CommonDAO cdao=new CommonDAO();
                         int role=cdao.getRole(id);                        
                         if(role==1)
@@ -118,13 +112,11 @@ private static final long serialVersionUID = 1L;
                     }	
                     
                 }
-                System.out.println("File uploaded successfully");
                 PrintWriter out=response.getWriter();
                 RequestDispatcher rd=request.getRequestDispatcher(dashName);
                 rd.include(request, response);
-                out.println("<html><body><center>");
-                out.println("<script> alert('Profile Image changed successfully'); </script>");
-                out.println("</center></body></html>");
+                Alert a=new Alert();
+                out.println(a.successAlert("Profile Image changed successfully"));
                 
             }catch(Exception e)
             {
@@ -132,21 +124,18 @@ private static final long serialVersionUID = 1L;
             	PrintWriter out=response.getWriter();
             	RequestDispatcher rd=request.getRequestDispatcher(dashName);
                 rd.include(request, response);
-                out.println("<html><body><center>");
-                out.println("<script> alert('Error uploading the image'); </script>");
-                out.println("</center></body></html>");
-                System.out.println("Error uploading the file");
+                Alert a=new Alert();
+                out.println(a.failureAlert("Error uploading the image"));
             }
             
-        }else
+        }
+        else
         {
         	PrintWriter out=response.getWriter();
         	RequestDispatcher rd=request.getRequestDispatcher(dashName);
             rd.include(request, response);
-            out.println("<html><body><center>");
-            out.println("<script> alert('Please provide a valid file'); </script>");
-            out.println("</center></body></html>");
-            System.out.println("File failed to be uploaded");
+            Alert a=new Alert();
+            out.println(a.failureAlert("Please provide a valid file"));
         }
     }
 

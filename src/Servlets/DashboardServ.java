@@ -1,8 +1,6 @@
 package Servlets;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,13 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-
 import Hibernate.*;
 import MigrateServlets.Alert;
+import dao.LoggerBO;
 
 @WebServlet("/DashboardServ")
 public class DashboardServ extends HttpServlet 
@@ -28,10 +23,8 @@ public class DashboardServ extends HttpServlet
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
     {
     	
-    	final Logger logger=Logger.getLogger(LoggerServ.class.getName());
-    	logger.setLevel(Level.INFO);
-    	InputStream input = new FileInputStream("C:\\Users\\ved.asole\\Desktop\\Project Workspace\\AngelDoc-Latest\\WebContent\\WEB-INF\\log4j.properties");
-    	PropertyConfigurator.configure(input);
+    	LoggerBO lbo=new LoggerBO();
+        Logger logger=lbo.getLogger("DashboardServ");
         
         if(request.getSession().getAttribute("userObj")==null)
         {
@@ -57,7 +50,7 @@ public class DashboardServ extends HttpServlet
                 rd.include(request, response);
                 Coordinator c=(Coordinator) session.getAttribute("userObj");
                 out.println(a.UserAlert(c.getFirstName()));
-                logger.info(c.getFirstName()+" have logged in successfully");
+                logger.info(c.getFirstName() +" "+ c.getLastName() + " logged in");
                 break;
             }
             case 2:
@@ -66,7 +59,7 @@ public class DashboardServ extends HttpServlet
                 rd.include(request, response);
                 Coordinator c=(Coordinator) session.getAttribute("userObj");
                 out.println(a.UserAlert(c.getFirstName()));
-                logger.info(c.getFirstName()+" have logged in successfully");
+                logger.info(c.getFirstName() +" "+ c.getLastName() + " logged in");
                 break;
             }
             case 3:
@@ -77,13 +70,13 @@ public class DashboardServ extends HttpServlet
                 {
                 	rd.include(request, response);
                 	out.println(a.newUserAlert(d.getFirstName()));
-                	logger.info(d.getFirstName()+" have logged in successfully");
+                	logger.info(d.getFirstName() +" "+ d.getLastName() + " logged in");
                 }
                 else
                 {
                 	rd.include(request, response);
                     out.println(a.UserAlert(d.getFirstName()));
-                    logger.info(d.getFirstName()+" have logged in successfully");
+                    logger.info(d.getFirstName() +" "+ d.getLastName() + " logged in");
                 }
                 break;
             }
@@ -95,13 +88,13 @@ public class DashboardServ extends HttpServlet
                 {                	
                 	rd.include(request, response);
                     out.println(a.newUserAlert(p.getFirstName()));
-                    logger.info(p.getFirstName()+" have logged in successfully");
+                    logger.info(p.getFirstName() +" "+ p.getLastName() + " logged in");
                 }
                 else
                 {
                 	rd.include(request, response);
                     out.println(a.UserAlert(p.getFirstName()));
-                    logger.info(p.getFirstName()+" have logged in successfully");
+                    logger.info(p.getFirstName() +" "+ p.getLastName() + " logged in");
                 }
                 break;
             }

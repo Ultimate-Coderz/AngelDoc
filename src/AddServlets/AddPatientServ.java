@@ -1,21 +1,21 @@
 	package AddServlets;
-	
-	import java.io.IOException;
-	import java.io.PrintWriter;
-	import javax.servlet.RequestDispatcher;
-	import javax.servlet.ServletException;
-	import javax.servlet.annotation.WebServlet;
-	import javax.servlet.http.HttpServlet;
-	import javax.servlet.http.HttpServletRequest;
-	import javax.servlet.http.HttpServletResponse;
-	import javax.servlet.http.HttpSession;
-	
-	import Hibernate.Coordinator;
-	import Hibernate.Patient;
-	import Hibernate.Users;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
+import Hibernate.Coordinator;
+import Hibernate.Patient;
 import MigrateServlets.Alert;
+import dao.LoggerBO;
 import dao.PatientDAO;
-	import dao.UsersDAO;
+import dao.UsersDAO;
 	
 	@WebServlet("/AddPatientServ")
 	public class AddPatientServ extends HttpServlet 
@@ -144,6 +144,9 @@ import dao.PatientDAO;
 	                        rd.include(request, response);
 	                        Alert a=new Alert();
 	    	                out.println(a.successAlert("Patient Added Successfully"));
+	    	                LoggerBO lbo=new LoggerBO();
+	                        Logger logger=lbo.getLogger("AddPatientServ");
+	                        logger.info("Patient Added by Admin");
 	                    }
 	                    else
 	                    {
@@ -151,6 +154,10 @@ import dao.PatientDAO;
 	                        rd.include(request, response);
 	                        Alert a=new Alert();
 	    	                out.println(a.successAlert("Patient Added Successfully"));
+	    	                LoggerBO lbo=new LoggerBO();
+	                        Logger logger=lbo.getLogger("AddPatientServ");
+	                        Coordinator c=(Coordinator) session.getAttribute("userObj");
+	                        logger.info("Patient added by "+c.getFirstName()+" "+c.getLastName());	                    
 	                    }                   
 	            }
 	            else

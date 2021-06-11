@@ -8,6 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
+
 import Hibernate.*;
 import MigrateServlets.Alert;
 import dao.*;
@@ -131,7 +134,10 @@ public class AddCoordinatorServ extends HttpServlet
                 rd.include(request, response);
                 Alert a=new Alert();
                 out.println(a.successAlert("Coordinator Added Successfully"));
-                
+                LoggerBO lbo=new LoggerBO();
+                Logger logger=lbo.getLogger("AddCoordinatorServ");
+                logger.info("New Coordinator added by Admin");
+            
             }
             else
             {

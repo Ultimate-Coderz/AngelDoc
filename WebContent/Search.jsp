@@ -37,7 +37,7 @@
   <%
      	 SearchDAO sdao = new SearchDAO();
        	 List<String> list = sdao.getDepartments();
-       	List<String> listCity = sdao.getCities();
+       	 List<String> listCity = sdao.getCities();
    %>
 	<br><br>
 	<div class="container ">

@@ -57,6 +57,18 @@
 <jsp:include page="Header.jsp"></jsp:include>
   
   <br><br><br>
+  	<%
+				if (request.getSession(false) == null) 
+				{
+					response.sendRedirect("Login.jsp");
+				}
+			%>
+	
+			<%
+				if (session.getAttribute("userObj") == null) {
+					response.sendRedirect("Login.jsp");
+				}
+  %>
   
 <%
 int userId = Integer.parseInt(request.getParameter("userId"));

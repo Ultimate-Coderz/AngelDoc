@@ -9,8 +9,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
+
 import Hibernate.*;
 import MigrateServlets.Alert;
+import dao.LoggerBO;
 import dao.UsersDAO;
 
 @WebServlet("/ResetPassword")
@@ -46,8 +50,10 @@ public class ResetPassword extends HttpServlet
 		PrintWriter out=response.getWriter();
 		Alert a =new Alert();
 		out.println(a.successAlert("Password reset successfully"));
-		
-	}
+		LoggerBO lbo=new LoggerBO();
+        Logger logger=lbo.getLogger("ResetPassword");
+        logger.info("Password resetted for "+email);
+    }
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 

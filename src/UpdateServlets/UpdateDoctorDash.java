@@ -8,7 +8,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import org.apache.log4j.Logger;
+
 import Hibernate.Doctor;
+import dao.LoggerBO;
 import dao.UpdateDAO;
 
 @WebServlet("/UpdateDoctorDash")
@@ -48,7 +52,9 @@ public class UpdateDoctorDash extends HttpServlet
         session.setAttribute("userObj",doc);
         RequestDispatcher rd=request.getRequestDispatcher("UpdateToDashboard");  //Change the link!!!!
         rd.forward(request, response);
-
+        LoggerBO lbo=new LoggerBO();
+        Logger logger=lbo.getLogger("UpdateDoctorDash");
+        logger.info(doc.getFirstName()+" "+doc.getLastName()+" updated his profile");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 

@@ -21,7 +21,6 @@ public class ForgetPassword extends HttpServlet
 				
 		if(request.getParameter("email")==null)
 		{
-			System.out.println("Liza == noob");
 			response.sendRedirect("ForgetPassword.jsp");
 		}
 		String email=request.getParameter("email");
@@ -60,8 +59,8 @@ public class ForgetPassword extends HttpServlet
 	}
 	
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
+	{
 		doPost(req, resp);
 	}
 

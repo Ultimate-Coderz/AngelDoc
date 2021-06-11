@@ -45,8 +45,7 @@ public class DetailsServ extends HttpServlet
 		String contactNum=request.getParameter("contactNum");
 		
 		int option = Integer.parseInt(request.getParameter("role"));
-		System.out.println("Role : "+option);
-
+		
 		UsersDAO udao=new UsersDAO();
 		boolean flag = true;
 		boolean validate=true;
@@ -69,24 +68,24 @@ public class DetailsServ extends HttpServlet
         	err="Please enter a valid first name";
         }
 
-			validate=validateName(secondName);
-	        if(validate)
+		validate=validateName(secondName);
+	    if(validate)
+	    {
+	        Character c=secondName.charAt(0);
+			String newName=Character.toUpperCase(c)+secondName.substring(1);
+			secondName=newName;
+	    }
+	    else
+	    {
+	        if(err.equals("Enter correct and full details"))
 	        {
-	        	Character c=secondName.charAt(0);
-				String newName=Character.toUpperCase(c)+secondName.substring(1);
-				secondName=newName;
+	        	err="Please enter a valid last name";
 	        }
 	        else
 	        {
-	        	if(err.equals("Enter correct and full details"))
-	        	{
-	        		err="Please enter a valid last name";
-	        	}
-	        	else
-	        	{
-	        		err="Please enter a valid first and last name";
-	        	}
+	        	err="Please enter a valid first and last name";
 	        }
+	    }
 		
 		if(validate)
 		{
@@ -150,8 +149,6 @@ public class DetailsServ extends HttpServlet
 					request.setAttribute("new", true);
 					RequestDispatcher rd = request.getRequestDispatcher("DashboardServ");
 					rd.forward(request, response);
-					System.out.println("Details Entered Successfully!");
-					
 				}
 				else if(option==4)
 				{
@@ -170,7 +167,6 @@ public class DetailsServ extends HttpServlet
 					request.setAttribute("new", true);
 					RequestDispatcher rd = request.getRequestDispatcher("DashboardServ");
 					rd.forward(request, response);
-					System.out.println("Patient added successfully!!");
 				}
 			}
 			else

@@ -35,13 +35,10 @@ public class NewSearchServ extends HttpServlet
 				if("".equals(name) || name==null)
 				{
 					docList=SearchDAO.listAllDoctors();
-					System.out.println("1 Executed");
-				}
+					}
 				else 
 				{
 					docList=SearchDAO.getAllDoctorsByName(name);
-
-					System.out.println("3 Executed");
 				}
 			}
 			else
@@ -50,52 +47,31 @@ public class NewSearchServ extends HttpServlet
 				if("".equals(name))
 				{
 					docList=SearchDAO.getAllDoctorsBySpec(docList, spec);
-					System.out.println("4 Executed");
-					
 				}
 				else
 				{
 					docList=SearchDAO.getAllDoctorsBySpec(docList, spec);
 					docList=SearchDAO.getAllDoctorsByName(docList,name);
-					System.out.println("6 Executed");
 				}
 			}
 		}
 		else
 		{
 			docList=SearchDAO.listAllDoctors();
-			System.out.println(docList.size());
-			docList=SearchDAO.getAllDoctorsByCity(docList, city);
-			System.out.println(docList.size());
-			for(Doctor d:docList)
-			{
-				System.out.println(d);
-			}
+			docList=SearchDAO.getAllDoctorsByCity(docList, city);			
 			if("Specialization".equals(spec))
 			{
-				if("".equals(name) || name==null)
-				{
-					
-					System.out.println("7 Executed");
-				}
-				else
+				if( !("".equals(name) || name==null) )
 				{
 					docList=SearchDAO.getAllDoctorsByName(docList, name);
-					System.out.println("8 Executed");				
 				}
 			}
 			else
 			{
 				docList=SearchDAO.getAllDoctorsBySpec(docList, spec);
-				System.out.println(docList.size());
-				if("".equals(name))
-				{
-					System.out.println("9 Executed");
-				}
-				else
+				if( !("".equals(name)) )
 				{
 					docList=SearchDAO.getAllDoctorsByName(docList, name);
-					System.out.println("10 Executed");
 				}
 			}
 		}

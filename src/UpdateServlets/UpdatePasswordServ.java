@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import Hibernate.*;
+import MigrateServlets.Alert;
 import dao.*;
 
  
@@ -47,17 +48,15 @@ public class UpdatePasswordServ extends HttpServlet
                 udao.update(u);
                 RequestDispatcher rd = request.getRequestDispatcher("AdminDashboard.jsp");
                 rd.include(request, response);
-                out.println("<html><body><center>");
-                out.println("<script> alert('Password updated sucessfully'); </script>");
-                out.println("</center></body></html>");
+                Alert a=new Alert();
+                out.println(a.successAlert("Password updated successfully"));
             }
             else
             {
                 RequestDispatcher rd = request.getRequestDispatcher("UpdatePassword.jsp");
                 rd.include(request, response);
-                out.println("<html><body><center>");
-                out.println("<script> alert('Old Password didn't match'); </script>");
-                out.println("</center></body></html>");
+                Alert a=new Alert();
+                out.println(a.failureAlert("Old Password didn't match"));
             }
             
         }break;
@@ -66,7 +65,6 @@ public class UpdatePasswordServ extends HttpServlet
         
         case 2:
         {
-            System.out.println("Case 2 ");
             CoordinatorDAO cdao=new CoordinatorDAO();
             Coordinator c= (Coordinator) session.getAttribute("userObj");
             
@@ -79,17 +77,15 @@ public class UpdatePasswordServ extends HttpServlet
                 udao.update(u);
                 RequestDispatcher rd = request.getRequestDispatcher("CoordinatorDashboard.jsp");
                 rd.include(request, response);
-                out.println("<html><body><center>");
-                out.println("<script> alert('Password updated sucessfully'); </script>");
-                out.println("</center></body></html>");
+                Alert a=new Alert();
+                out.println(a.successAlert("Password updated successfully"));
             }
             else
             {
                 RequestDispatcher rd = request.getRequestDispatcher("UpdatePassword.jsp");
                 rd.include(request, response);
-                out.println("<html><body><center>");
-                out.println("<script> alert('Old Password didn't match'); </script>");
-                out.println("</center></body></html>");
+                Alert a=new Alert();
+                out.println(a.failureAlert("Old Password didn't match"));
             }
             
         }break;
@@ -97,7 +93,6 @@ public class UpdatePasswordServ extends HttpServlet
         
         case 3: 
         {
-            System.out.println("in case 3");
             DoctorDAO cdao=new DoctorDAO();
             Doctor c= (Doctor) session.getAttribute("userObj");
             
@@ -108,20 +103,18 @@ public class UpdatePasswordServ extends HttpServlet
                 Users u=udao.find(c.geteMail());
                 u.setPassword(newP);
                 udao.update(u);
-                System.out.println("Updated sucessfully");
+                
                 RequestDispatcher rd = request.getRequestDispatcher("DoctorDashboard.jsp");
                 rd.include(request, response);
-                out.println("<html><body><center>");
-                out.println("<script> alert('Password updated sucessfully'); </script>");
-                out.println("</center></body></html>");
+                Alert a=new Alert();
+                out.println(a.successAlert("Password updated successfully"));
             }
             else
             {
                 RequestDispatcher rd = request.getRequestDispatcher("UpdatePassword.jsp");
                 rd.include(request, response);
-                out.println("<html><body><center>");
-                out.println("<script> alert('Old Password didn't match'); </script>");
-                out.println("</center></body></html>");
+                Alert a=new Alert();
+                out.println(a.failureAlert("Old Password didn't match"));
             }
             
         }break;
@@ -140,17 +133,15 @@ public class UpdatePasswordServ extends HttpServlet
                 udao.update(u);
                 RequestDispatcher rd = request.getRequestDispatcher("PatientDashboard.jsp");
                 rd.include(request, response);
-                out.println("<html><body><center>");
-                out.println("<script> alert('Password updated sucessfully'); </script>");
-                out.println("</center></body></html>");
+                Alert a=new Alert();
+                out.println(a.successAlert("Password updated successfully"));
             }
             else
             {
                 RequestDispatcher rd = request.getRequestDispatcher("UpdatePassword.jsp");
                 rd.include(request, response);
-                out.println("<html><body><center>");
-                out.println("<script> alert('Old Password didn't match'); </script>");
-                out.println("</center></body></html>");
+                Alert a=new Alert();
+                out.println(a.failureAlert("Old Password didn't match"));
             }
             
         }break;
