@@ -37,8 +37,8 @@
 	<body>
 		<%
 		
-			if (request.getSession(false) == null) {
-				System.out.println("Session is null!!!");
+			if (request.getSession(false) == null) 
+			{
 				response.sendRedirect("Login.jsp");
 			}
 		%>
@@ -49,9 +49,7 @@
 		}
 		
 			String appId=(String)request.getParameter("appId");
-			System.out.println("------------------------------------------"+appId);
 			String name = "./Prescriptions/"+ appId + ".pdf";
-			System.out.println("------------------------------------------"+name);
 		%>
 	
 	

@@ -8,31 +8,18 @@
 <br />
 
 [npm-version-badge]: https://img.shields.io/npm/v/notiflix.svg
-
 [npm-version-url]: https://www.npmjs.com/package/notiflix
-
 [dep-badge]: https://david-dm.org/notiflix/Notiflix.svg
-
 [dep-url]: https://david-dm.org/notiflix/Notiflix.svg
-
 [synk-badge]: https://snyk.io/test/github/notiflix/Notiflix/badge.svg?targetFile=package.json
-
 [synk-url]: https://snyk.io/test/github/notiflix/Notiflix?targetFile=package.json
-
 [downloads-image]: https://img.shields.io/npm/dm/notiflix.svg
-
 [downloads-url]: https://npmjs.org/package/notiflix
-
 [jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/notiflix/badge?style=rounded
-
 [jsdelivr-url]: https://www.jsdelivr.com/package/npm/notiflix
-
 [size-badge]: https://img.badgesize.io/https://cdn.jsdelivr.net/npm/notiflix@2.7.0/dist/notiflix-aio-2.7.0.min.js?compression=gzip
-
 [size-url]: https://cdn.jsdelivr.net/npm/notiflix@2.7.0/dist/notiflix-aio-2.7.0.min.js
-
 [lic-badge]: https://img.shields.io/github/license/notiflix/Notiflix.svg
-
 [lic-url]: https://github.com/notiflix/Notiflix/blob/master/LICENSE
 
 [![npm version][npm-version-badge]][npm-version-url]
@@ -44,24 +31,18 @@
 [![License][lic-badge]][lic-url]
 
 ## Notiflix | a JavaScript library for client-side non-blocking notifications.
-
-Notiflix is a JavaScript library for client-side non-blocking notifications, popup boxes, loading indicators, and more
-that makes your web projects much better.
+Notiflix is a JavaScript library for client-side non-blocking notifications, popup boxes, loading indicators, and more that makes your web projects much better.
 
 #### Current Version
-
 2.7.0 [*](https://github.com/notiflix/Notiflix/blob/master/CHANGELOG.md "CHANGELOG")
 
 #### Website
-
 https://www.notiflix.com
 
 #### Documentation
-
 https://www.notiflix.com/documentation
 
 #### Modules (Demo)
-
 - **Notiflix Notify** => https://www.notiflix.com/#Notify
 - **Notiflix Report** => https://www.notiflix.com/#Report
 - **Notiflix Confirm** => https://www.notiflix.com/#Confirm
@@ -101,7 +82,6 @@ import { Notify, Report, Confirm, Loading, Block } from "notiflix";
 ### (B) Add an HTML
 
 ##### CSS and JS
-
 ```html
 <link rel="stylesheet" href="dist/notiflix-2.7.0.min.css" />
 
@@ -109,7 +89,6 @@ import { Notify, Report, Confirm, Loading, Block } from "notiflix";
 ```
 
 ##### or only JS (All in One - Internal CSS)
-
 ```html
 <script src="dist/notiflix-aio-2.7.0.min.js"></script>
 ```
@@ -167,6 +146,7 @@ Notiflix.Notify.Success(
 ```
 
 --_--_----_--_----_--_----_--_----_--_----_--_--
+
 
 #### 2- Report Module
 
@@ -230,6 +210,7 @@ Notiflix.Report.Success(
 
 --_--_----_--_----_--_----_--_----_--_----_--_--
 
+
 #### 3- Confirm Module
 
 Show:
@@ -273,6 +254,7 @@ Notiflix.Confirm.Show(
 );
 ```
 
+
 Ask: (v2.5.0 and the next versions)
 
 ```js
@@ -307,6 +289,7 @@ Notiflix.Confirm.Ask(
 ```
 
 --_--_----_--_----_--_----_--_----_--_----_--_--
+
 
 #### 4- Loading Module
 
@@ -390,10 +373,10 @@ Notiflix.Loading.Custom('Loading...');
 
 --_--_----_--_----_--_----_--_----_--_----_--_--
 
+
 #### 5- Block Module
 
-Notiflix Block module can be used to block or unblock elements to prevents users actions during the process (AJAX etc.)
-without locking the browser or the other elements.
+Notiflix Block module can be used to block or unblock elements to prevents users actions during the process (AJAX etc.) without locking the browser or the other elements.
 
 Block:
 
@@ -434,6 +417,7 @@ Notiflix.Block.Standard(
 );
 ```
 
+
 Unblock:
 
 ```js
@@ -450,6 +434,7 @@ Notiflix.Block.Remove('.selector', 600);
 ```
 
 --_--_----_--_----_--_----_--_----_--_----_--_--
+
 
 ### Initialize (optional)
 
@@ -484,6 +469,7 @@ Notiflix.Notify.Init({
 
 --_--_----_--_----_--_----_--_----_--_----_--_--
 
+
 ### Merge (optional)
 
 `Notiflix.*.Merge` function can be used to deeply extend the `Init` function for a specific page or event.
@@ -496,9 +482,11 @@ Notiflix.Notify.Merge({
 });
 ```
 
+
 ---------
 ---------
 ---------
+
 
 #### Notiflix Notify Module: Default Options
 
@@ -707,7 +695,9 @@ Notiflix.Loading.Init({
 });
 ```
 
+
 ---------
+
 
 #### Notiflix Block Module: Default Options
 
@@ -736,9 +726,7 @@ Notiflix.Block.Init({
 ---------
 
 #### Copyright
-
 Copyright &copy; 2020 Notiflix
 
 #### License
-
 MIT license - https://opensource.org/licenses/MIT

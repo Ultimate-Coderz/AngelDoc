@@ -12,8 +12,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>AngelDoc</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="A web-based doctor consultancy system which allow patients to create their account on the website and then consult with the doctors who have already registered on the website." name="description">
+  <meta content="AngelDoc,AngelDoc Consultancy,angel doc,angel doc consultancy,angeldoc,Angeldoc,doctor consultancy,online doctor consultancy,online doctor help,online doctor" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -603,11 +603,11 @@
           <div class="col-md-3 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#departments">Departments</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
           </div>
           <div class="col-md-5">
@@ -626,6 +626,9 @@
         <div class="copyright">
           &copy; Copyright <strong><span>Angel Doc</span></strong>. All Rights Reserved
         </div>
+        <!-- <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div> -->
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>

@@ -13,11 +13,20 @@
 2021-05-30 14:32:26 INFO  LoggerServ:104 - Ved have logged in successfully
 2021-05-30 14:32:48 INFO  LoggerServ:104 - Priya have logged in successfully
 2021-05-30 14:33:15 INFO  LoggerServ:86 - Vignesh have logged in successfully
-2021-05-30 14:41:23 INFO  LoggerServ:60 - Admin have logged in successfully
-2021-05-30 14:41:40 INFO  LoggerServ:60 - Admin have logged in successfully
-2021-05-30 14:41:46 INFO  LoggerServ:60 - Admin have logged in successfully
-2021-06-05 11:33:44 INFO  LoggerServ:55 - Admin have logged in successfully
-2021-06-05 11:34:23 INFO  LoggerServ:55 - Admin have logged in successfully
-2021-06-05 11:50:26 INFO  LoggerServ:55 - Admin have logged in successfully
-2021-06-05 11:51:23 INFO  LoggerServ:55 - Admin have logged in successfully
-2021-06-05 11:53:29 INFO  LoggerServ:55 - Admin Profile have logged in successfully
+2021-06-07 01:11:06 INFO  LogoutServ:54 - Admin Profile has logged out
+2021-06-07 01:11:47 INFO  DashboardServ:97 - Ved Asole has logged in
+07-06-2021 01:14:12 INFO  LogoutServ:54 - Ved Asole has logged out
+07-06-2021 01:16:30 INFO  DashboardServ:97 - Ved Asole logged in
+07-06-2021 01:41:29 INFO  LogoutServ:54 - Ved Asole logged out
+08-06-2021 22:35:53 INFO  DashboardServ:53 - Admin Profile logged in
+08-06-2021 22:36:37 INFO  AddCoordinatorServ:139 - New Coordinator added by Admin
+08-06-2021 22:37:02 INFO  LogoutServ:54 - Admin Profile logged out
+08-06-2021 22:37:22 INFO  DashboardServ:53 - Admin Profile logged in
+08-06-2021 22:37:47 INFO  LogoutServ:54 - Admin Profile logged out
+08-06-2021 22:38:34 INFO  DashboardServ:62 - Sejal Meshram logged in
+08-06-2021 22:38:49 INFO  UpdateCoordinatorDash:55 - Sejal Gupta updated his profile
+08-06-2021 22:38:57 INFO  LogoutServ:54 - Sejal Gupta logged out
+08-06-2021 22:40:35 INFO  DashboardServ:91 - Janhavi Gupta logged in
+08-06-2021 22:41:02 INFO  LogoutServ:54 - Janhavi Gupta logged out
+08-06-2021 23:07:51 INFO  DashboardServ:53 - Admin Profile logged in
+08-06-2021 23:08:06 INFO  LogoutServ:54 - Admin Profile logged out

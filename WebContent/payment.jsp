@@ -82,8 +82,8 @@
               Payable Amount : Rs. 300
             </div>
             <%
-	    		if (request.getSession(false) == null) {
-	    			System.out.println("Session is null!!!");
+	    		if (request.getSession(false) == null) 
+	    		{
 	    			response.sendRedirect("Login.jsp");
 	    		}
 	    		if (session.getAttribute("userObj") == null) {
